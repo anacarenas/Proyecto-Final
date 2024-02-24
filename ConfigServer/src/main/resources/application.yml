@@ -1,0 +1,17 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        bootstrap: false
+        git:
+          clone-on-start: true
+          #Repositorio local
+          #uri: file:///D:/Learning/GitMicro/Config-Data
+          #Repositorio en Git
+          uri: https://github.com/anacarenas/Config-Data.git
+          default-label: main
+          #basedir: config-dir-github
